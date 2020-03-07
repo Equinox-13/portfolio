@@ -1,7 +1,7 @@
-
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -57,7 +57,7 @@
         <a class="nav-link" href="#">Github</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Resume</a>
+        <a class="nav-link" href="{% static 'resume.pdf' %}">Resume</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Blog</a>
@@ -70,12 +70,13 @@
 <main role="main">
 
   <section class="jumbotron text-center">
-    <div class="container">
+    <div class="container"
       <h1>Hi, I'm Johar</h1>
       <p class="lead text-muted">This is my portfolio website.</p>
       <p>
         <a href="#" class="btn btn-primary my-2">Email Me</a>
       </p>
+      <img src="{% static 'image_profile.png' %}" height="300"/>
     </div>
   </section>
 
